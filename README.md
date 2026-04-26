@@ -56,4 +56,4 @@ Tableau | Data Cleaning | Data Transformation | Exploratory Data Analysis | Dash
 
 # 👤 Author
 
-Shruti Walunj
+Mangesh Mohite
