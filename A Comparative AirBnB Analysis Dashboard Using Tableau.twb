@@ -1,0 +1,2921 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20243.24.1010.1014                               -->
+<workbook original-version='18.1' source-build='2024.3.0 (20243.24.1010.1014)' source-platform='win' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <DashboardGridOverlay />
+    <DashboardGridSize />
+    <MapboxVectorStylesAndLayers />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+  </document-format-change-manifest>
+  <repository-location derived-from='http://localhost:9100/workbooks/AirbnbDashbord_17023123099310?rev=1.3' id='AirbnbDashbord_17023123099310' path='/workbooks' revision='1.3' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column caption='Top 10 Host' datatype='integer' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='10'>
+        <calculation class='tableau' formula='10' />
+        <range max='100' min='1' />
+      </column>
+    </datasource>
+    <datasource caption='Airbnb_eda (Airbnb_eda)' inline='true' name='federated.0x8oohq0zd6kx414sk9mp1jxu091' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Airbnb_eda' name='excel-direct.1uah9tz0e0d3v2143nugh029dxy3'>
+            <connection class='excel-direct' cleaning='yes' compat='no' dataRefreshTime='' interpretationMode='1' validate='no' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.1uah9tz0e0d3v2143nugh029dxy3' name='Airbnb_eda' table='[Airbnb_eda$]' type='table'>
+          <columns gridOrigin='A1:W10001:no:A1:W10001:1' header='yes' lost='0' outcome='1' processed='160395'>
+            <column datatype='integer' name='id' ordinal='0' />
+            <column datatype='string' name='name' ordinal='1' />
+            <column datatype='integer' name='host_id' ordinal='2' />
+            <column datatype='string' name='host_name' ordinal='3' />
+            <column datatype='string' name='neighbourhood' ordinal='4' />
+            <column datatype='real' name='latitude' ordinal='5' />
+            <column datatype='real' name='longitude' ordinal='6' />
+            <column datatype='string' name='room_type' ordinal='7' />
+            <column datatype='integer' name='price' ordinal='8' />
+            <column datatype='integer' name='minimum_nights' ordinal='9' />
+            <column datatype='integer' name='number_of_reviews' ordinal='10' />
+            <column datatype='date' name='last_review' ordinal='11' />
+            <column datatype='real' name='reviews_per_month' ordinal='12' />
+            <column datatype='integer' name='calculated_host_listings_count' ordinal='13' />
+            <column datatype='integer' name='availability_365' ordinal='14' />
+            <column datatype='integer' name='number_of_reviews_ltm' ordinal='15' />
+            <column datatype='string' name='license' ordinal='16' />
+            <column datatype='string' name='City' ordinal='17' />
+            <column datatype='real' name='Rating' ordinal='18' />
+            <column datatype='integer' name='Bedrooms' ordinal='19' />
+            <column datatype='integer' name='Beds' ordinal='20' />
+            <column datatype='integer' name='Bathrooms' ordinal='21' />
+            <column datatype='string' name='license_status' ordinal='22' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Airbnb_eda]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:W10001:no:A1:W10001:1&quot;</attribute>
+              <attribute datatype='integer' name='lost'>0</attribute>
+              <attribute datatype='integer' name='outcome'>1</attribute>
+              <attribute datatype='integer' name='processed'>160395</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[id]</local-name>
+            <parent-name>[Airbnb_eda]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Airbnb!eda_B7F24BB894F14BDDB4B3E45723CA2657]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[name]</local-name>
+            <parent-name>[Airbnb_eda]</parent-name>
+            <remote-alias>name</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Airbnb!eda_B7F24BB894F14BDDB4B3E45723CA2657]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>host_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[host_id]</local-name>
+            <parent-name>[Airbnb_eda]</parent-name>
+            <remote-alias>host_id</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Airbnb!eda_B7F24BB894F14BDDB4B3E45723CA2657]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>host_name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[host_name]</local-name>
+            <parent-name>[Airbnb_eda]</parent-name>
+            <remote-alias>host_name</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Airbnb!eda_B7F24BB894F14BDDB4B3E45723CA2657]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>neighbourhood</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[neighbourhood]</local-name>
+            <parent-name>[Airbnb_eda]</parent-name>
+            <remote-alias>neighbourhood</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Airbnb!eda_B7F24BB894F14BDDB4B3E45723CA2657]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[latitude]</local-name>
+            <parent-name>[Airbnb_eda]</parent-name>
+            <remote-alias>latitude</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Airbnb!eda_B7F24BB894F14BDDB4B3E45723CA2657]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[longitude]</local-name>
+            <parent-name>[Airbnb_eda]</parent-name>
+            <remote-alias>longitude</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Airbnb!eda_B7F24BB894F14BDDB4B3E45723CA2657]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>room_type</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[room_type]</local-name>
+            <parent-name>[Airbnb_eda]</parent-name>
+            <remote-alias>room_type</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Airbnb!eda_B7F24BB894F14BDDB4B3E45723CA2657]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>price</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[price]</local-name>
+            <parent-name>[Airbnb_eda]</parent-name>
+            <remote-alias>price</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Airbnb!eda_B7F24BB894F14BDDB4B3E45723CA2657]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>minimum_nights</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[minimum_nights]</local-name>
+            <parent-name>[Airbnb_eda]</parent-name>
+            <remote-alias>minimum_nights</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Airbnb!eda_B7F24BB894F14BDDB4B3E45723CA2657]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>number_of_reviews</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[number_of_reviews]</local-name>
+            <parent-name>[Airbnb_eda]</parent-name>
+            <remote-alias>number_of_reviews</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Airbnb!eda_B7F24BB894F14BDDB4B3E45723CA2657]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>last_review</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[last_review]</local-name>
+            <parent-name>[Airbnb_eda]</parent-name>
+            <remote-alias>last_review</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <object-id>[Airbnb!eda_B7F24BB894F14BDDB4B3E45723CA2657]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>reviews_per_month</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[reviews_per_month]</local-name>
+            <parent-name>[Airbnb_eda]</parent-name>
+            <remote-alias>reviews_per_month</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Airbnb!eda_B7F24BB894F14BDDB4B3E45723CA2657]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>calculated_host_listings_count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[calculated_host_listings_count]</local-name>
+            <parent-name>[Airbnb_eda]</parent-name>
+            <remote-alias>calculated_host_listings_count</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Airbnb!eda_B7F24BB894F14BDDB4B3E45723CA2657]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>availability_365</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[availability_365]</local-name>
+            <parent-name>[Airbnb_eda]</parent-name>
+            <remote-alias>availability_365</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Airbnb!eda_B7F24BB894F14BDDB4B3E45723CA2657]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>number_of_reviews_ltm</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[number_of_reviews_ltm]</local-name>
+            <parent-name>[Airbnb_eda]</parent-name>
+            <remote-alias>number_of_reviews_ltm</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Airbnb!eda_B7F24BB894F14BDDB4B3E45723CA2657]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>license</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[license]</local-name>
+            <parent-name>[Airbnb_eda]</parent-name>
+            <remote-alias>license</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Airbnb!eda_B7F24BB894F14BDDB4B3E45723CA2657]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>City</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[City]</local-name>
+            <parent-name>[Airbnb_eda]</parent-name>
+            <remote-alias>City</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Airbnb!eda_B7F24BB894F14BDDB4B3E45723CA2657]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Rating</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Rating]</local-name>
+            <parent-name>[Airbnb_eda]</parent-name>
+            <remote-alias>Rating</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Airbnb!eda_B7F24BB894F14BDDB4B3E45723CA2657]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Bedrooms</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Bedrooms]</local-name>
+            <parent-name>[Airbnb_eda]</parent-name>
+            <remote-alias>Bedrooms</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Airbnb!eda_B7F24BB894F14BDDB4B3E45723CA2657]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Beds</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Beds]</local-name>
+            <parent-name>[Airbnb_eda]</parent-name>
+            <remote-alias>Beds</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Airbnb!eda_B7F24BB894F14BDDB4B3E45723CA2657]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Bathrooms</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Bathrooms]</local-name>
+            <parent-name>[Airbnb_eda]</parent-name>
+            <remote-alias>Bathrooms</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Airbnb!eda_B7F24BB894F14BDDB4B3E45723CA2657]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>license_status</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[license_status]</local-name>
+            <parent-name>[Airbnb_eda]</parent-name>
+            <remote-alias>license_status</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Airbnb!eda_B7F24BB894F14BDDB4B3E45723CA2657]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[:Measure Names]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;[federated.0x8oohq0zd6kx414sk9mp1jxu091].[sum:Bathrooms:qk]&quot;' value='Bathrooms' />
+        </aliases>
+      </column>
+      <column aggregation='Sum' datatype='integer' name='[Bathrooms]' role='dimension' type='ordinal' />
+      <column datatype='string' name='[City]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column caption='Airbnb_eda' datatype='table' name='[__tableau_internal_object_id__].[Airbnb!eda_B7F24BB894F14BDDB4B3E45723CA2657]' role='measure' type='quantitative' />
+      <column caption='Availability 365' datatype='integer' name='[availability_365]' role='measure' type='quantitative' />
+      <column caption='Calculated Host Listings Count' datatype='integer' name='[calculated_host_listings_count]' role='measure' type='quantitative' />
+      <column caption='Host Id' datatype='integer' name='[host_id]' role='dimension' type='ordinal' />
+      <column caption='Host Name' datatype='string' name='[host_name]' role='dimension' type='nominal' />
+      <column caption='Id' datatype='integer' name='[id]' role='dimension' type='ordinal' />
+      <column caption='Last Review' datatype='date' name='[last_review]' role='dimension' type='ordinal' />
+      <column aggregation='Avg' caption='Latitude' datatype='real' name='[latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column caption='License' datatype='string' name='[license]' role='dimension' type='nominal' />
+      <column caption='License Status' datatype='string' name='[license_status]' role='dimension' type='nominal' />
+      <column aggregation='Avg' caption='Longitude' datatype='real' name='[longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column caption='Minimum Nights' datatype='integer' name='[minimum_nights]' role='measure' type='quantitative' />
+      <column caption='Name' datatype='string' name='[name]' role='dimension' type='nominal' />
+      <column caption='Neighbourhood' datatype='string' name='[neighbourhood]' role='dimension' type='nominal' />
+      <column caption='Number Of Reviews' datatype='integer' name='[number_of_reviews]' role='measure' type='quantitative' />
+      <column caption='Number Of Reviews Ltm' datatype='integer' name='[number_of_reviews_ltm]' role='measure' type='quantitative' />
+      <column caption='Price' datatype='integer' name='[price]' role='measure' type='quantitative' />
+      <column caption='Reviews Per Month' datatype='real' name='[reviews_per_month]' role='dimension' type='quantitative' />
+      <column caption='Room Type' datatype='string' name='[room_type]' role='dimension' type='nominal' />
+      <column-instance column='[license_status]' derivation='None' name='[none:license_status:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Bathrooms]' derivation='Sum' name='[sum:Bathrooms:qk]' pivot='key' type='quantitative' />
+      <group caption='Action (Bathrooms)' hidden='true' name='[Action (Bathrooms)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[Bathrooms]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (License Status,Room Type)' hidden='true' name='[Action (License Status,Room Type)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[license_status]' />
+          <groupfilter function='level-members' level='[room_type]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Room Type)' hidden='true' name='[Action (Room Type)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[room_type]' />
+        </groupfilter>
+      </group>
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='Airbnb!eda_B7F24BB894F14BDDB4B3E45723CA2657' units='records'>
+        <connection authentication='auth-none' author-locale='en_US' class='hyper' dbname='C:/Users/SHRUTI WALUNJ/OneDrive/Desktop/Labmentix/Project 1 - AirBnB/A Comparative AirBnB Analysis Dashboard Using Tableau.twb Files/Data/Extracts/federated_0x8oohq0zd6kx414sk9mp1.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='12/11/2023 04:36:33 PM' username=''>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <refresh>
+            <refresh-event add-from-file-path='Airbnb_eda (Airbnb_eda)' increment-value='%null%' refresh-type='create' rows-inserted='11638' timestamp-start='2023-12-11 16:36:30.116' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>id</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Airbnb_eda</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>11638</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Airbnb!eda_B7F24BB894F14BDDB4B3E45723CA2657]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>name</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Airbnb_eda</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3486</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[Airbnb!eda_B7F24BB894F14BDDB4B3E45723CA2657]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>host_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[host_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>host_id</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Airbnb_eda</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3085</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Airbnb!eda_B7F24BB894F14BDDB4B3E45723CA2657]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>host_name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[host_name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>host_name</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Airbnb_eda</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1785</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[Airbnb!eda_B7F24BB894F14BDDB4B3E45723CA2657]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>neighbourhood</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[neighbourhood]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>neighbourhood</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Airbnb_eda</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>155</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[Airbnb!eda_B7F24BB894F14BDDB4B3E45723CA2657]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>latitude</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[latitude]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>latitude</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Airbnb_eda</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5632</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Airbnb!eda_B7F24BB894F14BDDB4B3E45723CA2657]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>longitude</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[longitude]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>longitude</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Airbnb_eda</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5288</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Airbnb!eda_B7F24BB894F14BDDB4B3E45723CA2657]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>room_type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[room_type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>room_type</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Airbnb_eda</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[Airbnb!eda_B7F24BB894F14BDDB4B3E45723CA2657]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>price</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[price]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>price</remote-alias>
+              <ordinal>8</ordinal>
+              <family>Airbnb_eda</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>642</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Airbnb!eda_B7F24BB894F14BDDB4B3E45723CA2657]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>minimum_nights</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[minimum_nights]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>minimum_nights</remote-alias>
+              <ordinal>9</ordinal>
+              <family>Airbnb_eda</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>54</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Airbnb!eda_B7F24BB894F14BDDB4B3E45723CA2657]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>number_of_reviews</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[number_of_reviews]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>number_of_reviews</remote-alias>
+              <ordinal>10</ordinal>
+              <family>Airbnb_eda</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>461</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Airbnb!eda_B7F24BB894F14BDDB4B3E45723CA2657]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>last_review</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[last_review]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>last_review</remote-alias>
+              <ordinal>11</ordinal>
+              <family>Airbnb_eda</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>830</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Airbnb!eda_B7F24BB894F14BDDB4B3E45723CA2657]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>reviews_per_month</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[reviews_per_month]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>reviews_per_month</remote-alias>
+              <ordinal>12</ordinal>
+              <family>Airbnb_eda</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>795</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Airbnb!eda_B7F24BB894F14BDDB4B3E45723CA2657]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>calculated_host_listings_count</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[calculated_host_listings_count]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>calculated_host_listings_count</remote-alias>
+              <ordinal>13</ordinal>
+              <family>Airbnb_eda</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>47</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Airbnb!eda_B7F24BB894F14BDDB4B3E45723CA2657]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>availability_365</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[availability_365]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>availability_365</remote-alias>
+              <ordinal>14</ordinal>
+              <family>Airbnb_eda</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>542</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Airbnb!eda_B7F24BB894F14BDDB4B3E45723CA2657]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>number_of_reviews_ltm</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[number_of_reviews_ltm]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>number_of_reviews_ltm</remote-alias>
+              <ordinal>15</ordinal>
+              <family>Airbnb_eda</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>125</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Airbnb!eda_B7F24BB894F14BDDB4B3E45723CA2657]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>license</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[license]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>license</remote-alias>
+              <ordinal>16</ordinal>
+              <family>Airbnb_eda</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4579</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[Airbnb!eda_B7F24BB894F14BDDB4B3E45723CA2657]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>City</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[City]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>City</remote-alias>
+              <ordinal>17</ordinal>
+              <family>Airbnb_eda</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[Airbnb!eda_B7F24BB894F14BDDB4B3E45723CA2657]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Rating</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Rating]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Rating</remote-alias>
+              <ordinal>18</ordinal>
+              <family>Airbnb_eda</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>130</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Airbnb!eda_B7F24BB894F14BDDB4B3E45723CA2657]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Bedrooms</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Bedrooms]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Bedrooms</remote-alias>
+              <ordinal>19</ordinal>
+              <family>Airbnb_eda</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>16</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Airbnb!eda_B7F24BB894F14BDDB4B3E45723CA2657]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Beds</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Beds]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Beds</remote-alias>
+              <ordinal>20</ordinal>
+              <family>Airbnb_eda</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>15</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Airbnb!eda_B7F24BB894F14BDDB4B3E45723CA2657]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Bathrooms</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Bathrooms]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Bathrooms</remote-alias>
+              <ordinal>21</ordinal>
+              <family>Airbnb_eda</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>13</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Airbnb!eda_B7F24BB894F14BDDB4B3E45723CA2657]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>license_status</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[license_status]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>license_status</remote-alias>
+              <ordinal>22</ordinal>
+              <family>Airbnb_eda</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[Airbnb!eda_B7F24BB894F14BDDB4B3E45723CA2657]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:license_status:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Not registered&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Registered&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='Airbnb_eda' id='Airbnb!eda_B7F24BB894F14BDDB4B3E45723CA2657'>
+            <properties context=''>
+              <relation connection='excel-direct.1uah9tz0e0d3v2143nugh029dxy3' name='Airbnb_eda' table='[Airbnb_eda$]' type='table'>
+                <columns gridOrigin='A1:W10001:no:A1:W10001:1' header='yes' lost='0' outcome='1' processed='160395'>
+                  <column datatype='integer' name='id' ordinal='0' />
+                  <column datatype='string' name='name' ordinal='1' />
+                  <column datatype='integer' name='host_id' ordinal='2' />
+                  <column datatype='string' name='host_name' ordinal='3' />
+                  <column datatype='string' name='neighbourhood' ordinal='4' />
+                  <column datatype='real' name='latitude' ordinal='5' />
+                  <column datatype='real' name='longitude' ordinal='6' />
+                  <column datatype='string' name='room_type' ordinal='7' />
+                  <column datatype='integer' name='price' ordinal='8' />
+                  <column datatype='integer' name='minimum_nights' ordinal='9' />
+                  <column datatype='integer' name='number_of_reviews' ordinal='10' />
+                  <column datatype='date' name='last_review' ordinal='11' />
+                  <column datatype='real' name='reviews_per_month' ordinal='12' />
+                  <column datatype='integer' name='calculated_host_listings_count' ordinal='13' />
+                  <column datatype='integer' name='availability_365' ordinal='14' />
+                  <column datatype='integer' name='number_of_reviews_ltm' ordinal='15' />
+                  <column datatype='string' name='license' ordinal='16' />
+                  <column datatype='string' name='City' ordinal='17' />
+                  <column datatype='real' name='Rating' ordinal='18' />
+                  <column datatype='integer' name='Bedrooms' ordinal='19' />
+                  <column datatype='integer' name='Beds' ordinal='20' />
+                  <column datatype='integer' name='Bathrooms' ordinal='21' />
+                  <column datatype='string' name='license_status' ordinal='22' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <actions>
+    <action caption='Filter 1 (generated)' name='[Action1_4E57389FE78841ACBC87CB912BD40EC2]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='License Satuts / Room type' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+    <action caption='Filter 2 (generated)' name='[Action2_EF9EC385DA3148C682F5BD5D8F5E3624]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Room type / Price' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+    <action caption='Filter 3 (generated)' name='[Action3_1045D08CB3584C79B1B12E980A40C00F]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Number of rating /year' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+    <action caption='Filter 5 (generated)' name='[Action5_C771AE456E2B480A8A2E0D672494DCD0]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Total Revenue ' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+    <action caption='Filter 6 (generated)' name='[Action6_4BA1527FB0514BE3BB4830528B5B093D]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Average Rating' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+    <action caption='Filter 7 (generated)' name='[Action7_8B95AE816E514E1995CD4B3CAD64C220]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Average Price' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+    <action caption='Filter 4 (generated)' name='[Action8_3F37C45A94C048739A9F5B7F3B572373]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Total bed/bedroom/bathroom' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+    <action caption='Filter 8 (generated)' name='[Action8_5E19ED8020FA4A08BBF8BA11ED783B97]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Total Booking' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+    <action caption='Filter 9 (generated)' name='[Action9_87EEF2A4E6FC4BADB6707B233B35BBDF]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Dashboard 1' type='sheet' worksheet='Name /Availbilty' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Dashboard 1' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Average Price'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='16'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='http://localhost:9100/workbooks/AirbnbDashbord_17023123099310/AveragePrice?rev=' id='91736616' path='/workbooks/AirbnbDashbord_17023123099310' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Airbnb_eda (Airbnb_eda)' name='federated.0x8oohq0zd6kx414sk9mp1jxu091' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0x8oohq0zd6kx414sk9mp1jxu091'>
+            <column aggregation='Sum' datatype='integer' name='[Bathrooms]' role='dimension' type='ordinal' />
+            <column-instance column='[price]' derivation='Avg' name='[avg:price:qk]' pivot='key' type='quantitative' />
+            <column caption='License Status' datatype='string' name='[license_status]' role='dimension' type='nominal' />
+            <column caption='Price' datatype='integer' name='[price]' role='measure' type='quantitative' />
+            <column caption='Room Type' datatype='string' name='[room_type]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (Bathrooms)]'>
+            <groupfilter function='level-members' level='[Bathrooms]' user:ui-action-filter='[Action3_1045D08CB3584C79B1B12E980A40C00F]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (License Status,Room Type)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_4E57389FE78841ACBC87CB912BD40EC2]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[license_status]' />
+              <groupfilter function='level-members' level='[room_type]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (Room Type)]'>
+            <groupfilter function='level-members' level='[room_type]' user:ui-action-filter='[Action2_EF9EC385DA3148C682F5BD5D8F5E3624]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (License Status,Room Type)]</column>
+            <column>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (Room Type)]</column>
+            <column>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (Bathrooms)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' value='center' />
+            <format attr='vertical-align' value='center' />
+            <format attr='wrap' value='on' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-size' value='14' />
+            <format attr='font-family' value='Tableau Semibold' />
+            <format attr='color' value='#000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[avg:price:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{E40646F5-DCAC-4B72-A732-7DE62EF7D3EC}' />
+    </worksheet>
+    <worksheet name='Average Rating'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='16'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='http://localhost:9100/workbooks/AirbnbDashbord_17023123099310/AverageRating?rev=' id='91736617' path='/workbooks/AirbnbDashbord_17023123099310' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Airbnb_eda (Airbnb_eda)' name='federated.0x8oohq0zd6kx414sk9mp1jxu091' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0x8oohq0zd6kx414sk9mp1jxu091'>
+            <column aggregation='Sum' datatype='integer' name='[Bathrooms]' role='dimension' type='ordinal' />
+            <column datatype='real' name='[Rating]' role='measure' type='quantitative' />
+            <column-instance column='[Rating]' derivation='Avg' name='[avg:Rating:qk]' pivot='key' type='quantitative' />
+            <column caption='License Status' datatype='string' name='[license_status]' role='dimension' type='nominal' />
+            <column caption='Room Type' datatype='string' name='[room_type]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (Bathrooms)]'>
+            <groupfilter function='level-members' level='[Bathrooms]' user:ui-action-filter='[Action3_1045D08CB3584C79B1B12E980A40C00F]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (License Status,Room Type)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_4E57389FE78841ACBC87CB912BD40EC2]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[license_status]' />
+              <groupfilter function='level-members' level='[room_type]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (Room Type)]'>
+            <groupfilter function='level-members' level='[room_type]' user:ui-action-filter='[Action2_EF9EC385DA3148C682F5BD5D8F5E3624]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (License Status,Room Type)]</column>
+            <column>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (Room Type)]</column>
+            <column>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (Bathrooms)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' value='center' />
+            <format attr='vertical-align' value='center' />
+            <format attr='wrap' value='on' />
+            <format attr='text-orientation' value='0' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+            <format attr='border-width' data-class='subtotal' value='0' />
+            <format attr='border-style' data-class='subtotal' value='none' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+            <format attr='border-width' data-class='subtotal' value='0' />
+            <format attr='border-style' data-class='subtotal' value='none' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+            <format attr='band-size' scope='rows' value='0' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-size' value='16' />
+            <format attr='font-weight' value='normal' />
+            <format attr='font-family' value='Tableau Semibold' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[avg:Rating:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{44A4CED7-A152-4939-9263-7DDA2F58CDC5}' />
+    </worksheet>
+    <worksheet name='Bedroom'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1'>Number Of Bedroom, Bed &amp; Bathroom By room type</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='http://localhost:9100/workbooks/AirbnbDashbord_17023123099310/Bedroom?rev=' id='91736626' path='/workbooks/AirbnbDashbord_17023123099310' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Airbnb_eda (Airbnb_eda)' name='federated.0x8oohq0zd6kx414sk9mp1jxu091' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0x8oohq0zd6kx414sk9mp1jxu091'>
+            <column aggregation='Sum' datatype='integer' name='[Bathrooms]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[Bedrooms]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Beds]' role='measure' type='quantitative' />
+            <column caption='License Status' datatype='string' name='[license_status]' role='dimension' type='nominal' />
+            <column-instance column='[Bathrooms]' derivation='None' name='[none:Bathrooms:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[room_type]' derivation='None' name='[none:room_type:nk]' pivot='key' type='nominal' />
+            <column caption='Room Type' datatype='string' name='[room_type]' role='dimension' type='nominal' />
+            <column-instance column='[Bedrooms]' derivation='Sum' name='[sum:Bedrooms:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Beds]' derivation='Sum' name='[sum:Beds:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (Bathrooms)]'>
+            <groupfilter function='level-members' level='[Bathrooms]' user:ui-action-filter='[Action3_1045D08CB3584C79B1B12E980A40C00F]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (License Status,Room Type)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_4E57389FE78841ACBC87CB912BD40EC2]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[license_status]' />
+              <groupfilter function='level-members' level='[room_type]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (Room Type)]'>
+            <groupfilter function='level-members' level='[room_type]' user:ui-action-filter='[Action2_EF9EC385DA3148C682F5BD5D8F5E3624]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (Room Type)]</column>
+            <column>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (Bathrooms)]</column>
+            <column>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (License Status,Room Type)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[sum:Bedrooms:qk]' />
+              <text column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[sum:Bedrooms:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[sum:Beds:qk]</rows>
+        <cols>([federated.0x8oohq0zd6kx414sk9mp1jxu091].[none:room_type:nk] / [federated.0x8oohq0zd6kx414sk9mp1jxu091].[none:Bathrooms:ok])</cols>
+      </table>
+      <simple-id uuid='{EDD59142-C5FE-4D24-87EF-B4F65D803A01}' />
+    </worksheet>
+    <worksheet name='License Satuts / Room type'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1'>License By Room Type</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='http://localhost:9100/workbooks/AirbnbDashbord_17023123099310/LicenseSatutsRoomtype?rev=' id='91736620' path='/workbooks/AirbnbDashbord_17023123099310' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Airbnb_eda (Airbnb_eda)' name='federated.0x8oohq0zd6kx414sk9mp1jxu091' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0x8oohq0zd6kx414sk9mp1jxu091'>
+            <column aggregation='Sum' datatype='integer' name='[Bathrooms]' role='dimension' type='ordinal' />
+            <column caption='License Status' datatype='string' name='[license_status]' role='dimension' type='nominal' />
+            <column-instance column='[license_status]' derivation='None' name='[none:license_status:nk]' pivot='key' type='nominal' />
+            <column-instance column='[room_type]' derivation='None' name='[none:room_type:nk]' pivot='key' type='nominal' />
+            <column caption='Price' datatype='integer' name='[price]' role='measure' type='quantitative' />
+            <column caption='Room Type' datatype='string' name='[room_type]' role='dimension' type='nominal' />
+            <column-instance column='[price]' derivation='Sum' name='[sum:price:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (Bathrooms)]'>
+            <groupfilter function='level-members' level='[Bathrooms]' user:ui-action-filter='[Action3_1045D08CB3584C79B1B12E980A40C00F]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (Room Type)]'>
+            <groupfilter function='level-members' level='[room_type]' user:ui-action-filter='[Action2_EF9EC385DA3148C682F5BD5D8F5E3624]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (Room Type)]</column>
+            <column>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (Bathrooms)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='width' field='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[sum:price:qk]' value='109' />
+            <format attr='height' field='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[none:room_type:nk]' value='35' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[none:room_type:nk]' value='144' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='color' value='#000000' />
+            <format attr='font-weight' value='normal' />
+            <format attr='font-size' value='10' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[none:license_status:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[sum:price:qk]</rows>
+        <cols>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[none:room_type:nk]</cols>
+      </table>
+      <simple-id uuid='{0F925E0E-D74A-485E-85B0-CD8B617187B0}' />
+    </worksheet>
+    <worksheet name='Name /Availbilty'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1'>City Name with Availabilty_365</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='http://localhost:9100/workbooks/AirbnbDashbord_17023123099310/NameAvailbilty?rev=' id='91736624' path='/workbooks/AirbnbDashbord_17023123099310' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Airbnb_eda (Airbnb_eda)' name='federated.0x8oohq0zd6kx414sk9mp1jxu091' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0x8oohq0zd6kx414sk9mp1jxu091'>
+            <column aggregation='Sum' datatype='integer' name='[Bathrooms]' role='dimension' type='ordinal' />
+            <column datatype='string' name='[City]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+            <column caption='Availability 365' datatype='integer' name='[availability_365]' role='measure' type='quantitative' />
+            <column-instance column='[availability_365]' derivation='Count' name='[cnt:availability_365:qk]' pivot='key' type='quantitative' />
+            <column caption='License Status' datatype='string' name='[license_status]' role='dimension' type='nominal' />
+            <column-instance column='[City]' derivation='None' name='[none:City:nk]' pivot='key' type='nominal' />
+            <column caption='Room Type' datatype='string' name='[room_type]' role='dimension' type='nominal' />
+            <column-instance column='[availability_365]' derivation='Sum' name='[sum:availability_365:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (Bathrooms)]'>
+            <groupfilter function='level-members' level='[Bathrooms]' user:ui-action-filter='[Action3_1045D08CB3584C79B1B12E980A40C00F]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (License Status,Room Type)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_4E57389FE78841ACBC87CB912BD40EC2]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[license_status]' />
+              <groupfilter function='level-members' level='[room_type]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (Room Type)]'>
+            <groupfilter function='level-members' level='[room_type]' user:ui-action-filter='[Action2_EF9EC385DA3148C682F5BD5D8F5E3624]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (Room Type)]</column>
+            <column>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (Bathrooms)]</column>
+            <column>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (License Status,Room Type)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='249' />
+            <format attr='height' value='260' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[sum:availability_365:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+            <encoding attr='size-bar' field='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[cnt:availability_365:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[sum:availability_365:qk]' />
+              <size column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[cnt:availability_365:qk]' />
+              <text column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[none:City:nk]' />
+              <text column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[sum:availability_365:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='size' value='1.2853591442108154' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{45D00590-603E-4D91-9AC9-48D6536AED55}' />
+    </worksheet>
+    <worksheet name='Number of rating /year'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1'>Number of Minium Night With Badrooms</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='http://localhost:9100/workbooks/AirbnbDashbord_17023123099310/Numberofratingyear?rev=' id='91736623' path='/workbooks/AirbnbDashbord_17023123099310' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Airbnb_eda (Airbnb_eda)' name='federated.0x8oohq0zd6kx414sk9mp1jxu091' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0x8oohq0zd6kx414sk9mp1jxu091'>
+            <column aggregation='Sum' datatype='integer' name='[Bathrooms]' role='dimension' type='ordinal' />
+            <column-instance column='[number_of_reviews]' derivation='Count' name='[cnt:number_of_reviews:qk]' pivot='key' type='quantitative' />
+            <column caption='License Status' datatype='string' name='[license_status]' role='dimension' type='nominal' />
+            <column caption='Minimum Nights' datatype='integer' name='[minimum_nights]' role='measure' type='quantitative' />
+            <column-instance column='[Bathrooms]' derivation='None' name='[none:Bathrooms:ok]' pivot='key' type='ordinal' />
+            <column caption='Number Of Reviews' datatype='integer' name='[number_of_reviews]' role='measure' type='quantitative' />
+            <column caption='Room Type' datatype='string' name='[room_type]' role='dimension' type='nominal' />
+            <column-instance column='[minimum_nights]' derivation='Sum' name='[sum:minimum_nights:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (License Status,Room Type)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_4E57389FE78841ACBC87CB912BD40EC2]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[license_status]' />
+              <groupfilter function='level-members' level='[room_type]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (Room Type)]'>
+            <groupfilter function='level-members' level='[room_type]' user:ui-action-filter='[Action2_EF9EC385DA3148C682F5BD5D8F5E3624]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (Room Type)]</column>
+            <column>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (License Status,Room Type)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='on' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[sum:minimum_nights:qk]' />
+              <color column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[sum:minimum_nights:qk]' />
+              <text column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[none:Bathrooms:ok]' />
+              <text column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[cnt:number_of_reviews:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{360DB75B-8CAE-42C9-AC2F-E125F37B76B2}' />
+    </worksheet>
+    <worksheet name='Room type / Price'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1'>All Room type With Price</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='http://localhost:9100/workbooks/AirbnbDashbord_17023123099310/RoomtypePrice?rev=' id='91736621' path='/workbooks/AirbnbDashbord_17023123099310' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Airbnb_eda (Airbnb_eda)' name='federated.0x8oohq0zd6kx414sk9mp1jxu091' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0x8oohq0zd6kx414sk9mp1jxu091'>
+            <column aggregation='Sum' datatype='integer' name='[Bathrooms]' role='dimension' type='ordinal' />
+            <column caption='License Status' datatype='string' name='[license_status]' role='dimension' type='nominal' />
+            <column-instance column='[room_type]' derivation='None' name='[none:room_type:nk]' pivot='key' type='nominal' />
+            <column caption='Price' datatype='integer' name='[price]' role='measure' type='quantitative' />
+            <column caption='Room Type' datatype='string' name='[room_type]' role='dimension' type='nominal' />
+            <column-instance column='[price]' derivation='Sum' name='[sum:price:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (Bathrooms)]'>
+            <groupfilter function='level-members' level='[Bathrooms]' user:ui-action-filter='[Action3_1045D08CB3584C79B1B12E980A40C00F]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (License Status,Room Type)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_4E57389FE78841ACBC87CB912BD40EC2]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[license_status]' />
+              <groupfilter function='level-members' level='[room_type]' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (Bathrooms)]</column>
+            <column>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (License Status,Room Type)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='239' />
+            <format attr='height' field='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[none:room_type:nk]' value='35' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='background-color' field='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[none:room_type:nk]' value='#ffffff' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[sum:price:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='background-color' data-class='subtotal' value='#00000000' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <encodings>
+              <color column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[sum:price:qk]' />
+              <text column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[sum:price:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='has-stroke' value='false' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
+                <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[none:room_type:nk]</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{6F91BFFF-E7FA-4636-81C7-25A988DC1DBF}' />
+    </worksheet>
+    <worksheet name='Top 10 Host Name'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1'>Top 10 Host Name by Price</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='http://localhost:9100/workbooks/AirbnbDashbord_17023123099310/Top10HostName?rev=' id='91736622' path='/workbooks/AirbnbDashbord_17023123099310' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Airbnb_eda (Airbnb_eda)' name='federated.0x8oohq0zd6kx414sk9mp1jxu091' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column caption='Top 10 Host' datatype='integer' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='10'>
+              <calculation class='tableau' formula='10' />
+              <range max='100' min='1' />
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.0x8oohq0zd6kx414sk9mp1jxu091'>
+            <column aggregation='Sum' datatype='integer' name='[Bathrooms]' role='dimension' type='ordinal' />
+            <column caption='Host Name' datatype='string' name='[host_name]' role='dimension' type='nominal' />
+            <column caption='License Status' datatype='string' name='[license_status]' role='dimension' type='nominal' />
+            <column-instance column='[host_name]' derivation='None' name='[none:host_name:nk]' pivot='key' type='nominal' />
+            <column caption='Price' datatype='integer' name='[price]' role='measure' type='quantitative' />
+            <column caption='Room Type' datatype='string' name='[room_type]' role='dimension' type='nominal' />
+            <column-instance column='[price]' derivation='Sum' name='[sum:price:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (Bathrooms)]'>
+            <groupfilter function='level-members' level='[Bathrooms]' user:ui-action-filter='[Action3_1045D08CB3584C79B1B12E980A40C00F]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (License Status,Room Type)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_4E57389FE78841ACBC87CB912BD40EC2]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[license_status]' />
+              <groupfilter function='level-members' level='[room_type]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (Room Type)]'>
+            <groupfilter function='level-members' level='[room_type]' user:ui-action-filter='[Action2_EF9EC385DA3148C682F5BD5D8F5E3624]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[none:host_name:nk]'>
+            <groupfilter count='[Parameters].[Parameter 1]' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([price])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:host_name:nk]' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-manual-selection-is-empty='true' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[none:host_name:nk]</column>
+            <column>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (Room Type)]</column>
+            <column>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (Bathrooms)]</column>
+            <column>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (License Status,Room Type)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[sum:price:qk]' />
+              <color column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[sum:price:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[none:host_name:nk]</rows>
+        <cols>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[sum:price:qk]</cols>
+      </table>
+      <simple-id uuid='{5A9D43AA-CE19-44D1-9481-8B5C4C077F9B}' />
+    </worksheet>
+    <worksheet name='Total Booking'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontname='Tableau Light' fontsize='16'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='http://localhost:9100/workbooks/AirbnbDashbord_17023123099310/TotalBooking?rev=' id='91736615' path='/workbooks/AirbnbDashbord_17023123099310' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Airbnb_eda (Airbnb_eda)' name='federated.0x8oohq0zd6kx414sk9mp1jxu091' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0x8oohq0zd6kx414sk9mp1jxu091'>
+            <column aggregation='Sum' datatype='integer' name='[Bathrooms]' role='dimension' type='ordinal' />
+            <column-instance column='[id]' derivation='Count' name='[cnt:id:qk]' pivot='key' type='quantitative' />
+            <column caption='Id' datatype='integer' name='[id]' role='dimension' type='ordinal' />
+            <column caption='License Status' datatype='string' name='[license_status]' role='dimension' type='nominal' />
+            <column caption='Room Type' datatype='string' name='[room_type]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (Bathrooms)]'>
+            <groupfilter function='level-members' level='[Bathrooms]' user:ui-action-filter='[Action3_1045D08CB3584C79B1B12E980A40C00F]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (License Status,Room Type)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_4E57389FE78841ACBC87CB912BD40EC2]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[license_status]' />
+              <groupfilter function='level-members' level='[room_type]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (Room Type)]'>
+            <groupfilter function='level-members' level='[room_type]' user:ui-action-filter='[Action2_EF9EC385DA3148C682F5BD5D8F5E3624]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (License Status,Room Type)]</column>
+            <column>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (Room Type)]</column>
+            <column>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (Bathrooms)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' value='center' />
+            <format attr='vertical-align' value='center' />
+            <format attr='wrap' value='on' />
+            <format attr='text-orientation' value='0' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-size' value='14' />
+            <format attr='font-weight' value='normal' />
+            <format attr='font-family' value='Tableau Semibold' />
+            <format attr='color' value='#1b1b1b' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[cnt:id:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{5CAD7BD4-C215-4793-AB20-121289EE0364}' />
+    </worksheet>
+    <worksheet name='Total Revenue '>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='16'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <repository-location derived-from='http://localhost:9100/workbooks/AirbnbDashbord_17023123099310/TotalRevenue?rev=' id='91736618' path='/workbooks/AirbnbDashbord_17023123099310' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Airbnb_eda (Airbnb_eda)' name='federated.0x8oohq0zd6kx414sk9mp1jxu091' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0x8oohq0zd6kx414sk9mp1jxu091'>
+            <column aggregation='Sum' datatype='integer' name='[Bathrooms]' role='dimension' type='ordinal' />
+            <column caption='License Status' datatype='string' name='[license_status]' role='dimension' type='nominal' />
+            <column caption='Price' datatype='integer' name='[price]' role='measure' type='quantitative' />
+            <column caption='Room Type' datatype='string' name='[room_type]' role='dimension' type='nominal' />
+            <column-instance column='[price]' derivation='Sum' name='[sum:price:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (Bathrooms)]'>
+            <groupfilter function='level-members' level='[Bathrooms]' user:ui-action-filter='[Action3_1045D08CB3584C79B1B12E980A40C00F]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (License Status,Room Type)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_4E57389FE78841ACBC87CB912BD40EC2]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[license_status]' />
+              <groupfilter function='level-members' level='[room_type]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (Room Type)]'>
+            <groupfilter function='level-members' level='[room_type]' user:ui-action-filter='[Action2_EF9EC385DA3148C682F5BD5D8F5E3624]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (License Status,Room Type)]</column>
+            <column>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (Room Type)]</column>
+            <column>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (Bathrooms)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='wrap' value='on' />
+            <format attr='vertical-align' value='center' />
+            <format attr='text-align' value='center' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-size' value='16' />
+            <format attr='font-family' value='Tableau Semibold' />
+            <format attr='font-weight' value='normal' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[sum:price:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{2CE00F47-EA88-423E-8261-62858A8C5D07}' />
+    </worksheet>
+    <worksheet name='Total bed/bedroom/bathroom'>
+      <repository-location derived-from='http://localhost:9100/workbooks/AirbnbDashbord_17023123099310/Totalbedbedroombathroom?rev=' id='91736619' path='/workbooks/AirbnbDashbord_17023123099310' revision='' />
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Airbnb_eda (Airbnb_eda)' name='federated.0x8oohq0zd6kx414sk9mp1jxu091' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0x8oohq0zd6kx414sk9mp1jxu091'>
+            <column aggregation='Sum' datatype='integer' name='[Bathrooms]' role='dimension' type='ordinal' />
+            <column datatype='integer' name='[Bedrooms]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[Beds]' role='measure' type='quantitative' />
+            <column caption='License Status' datatype='string' name='[license_status]' role='dimension' type='nominal' />
+            <column caption='Room Type' datatype='string' name='[room_type]' role='dimension' type='nominal' />
+            <column-instance column='[Bathrooms]' derivation='Sum' name='[sum:Bathrooms:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Bedrooms]' derivation='Sum' name='[sum:Bedrooms:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Beds]' derivation='Sum' name='[sum:Beds:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0x8oohq0zd6kx414sk9mp1jxu091].[sum:Bathrooms:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0x8oohq0zd6kx414sk9mp1jxu091].[sum:Bedrooms:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0x8oohq0zd6kx414sk9mp1jxu091].[sum:Beds:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <alphabetic-sort column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[:Measure Names]' direction='ASC' />
+          <filter class='categorical' column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (Bathrooms)]'>
+            <groupfilter function='level-members' level='[Bathrooms]' user:ui-action-filter='[Action3_1045D08CB3584C79B1B12E980A40C00F]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (License Status,Room Type)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_4E57389FE78841ACBC87CB912BD40EC2]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[license_status]' />
+              <groupfilter function='level-members' level='[room_type]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (Room Type)]'>
+            <groupfilter function='level-members' level='[room_type]' user:ui-action-filter='[Action2_EF9EC385DA3148C682F5BD5D8F5E3624]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[:Measure Names]</column>
+            <column>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (Bathrooms)]</column>
+            <column>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (Room Type)]</column>
+            <column>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Action (License Status,Room Type)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[:Measure Names]' value='199' />
+            <format attr='height' value='60' />
+            <format attr='text-align' value='center' />
+            <format attr='vertical-align' value='center' />
+            <format attr='border-style' value='solid' />
+            <format attr='border-color' value='#ffffff' />
+            <format attr='border-width' value='4' />
+            <format attr='wrap' value='on' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='height' field='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[:Measure Names]' value='40' />
+            <format attr='border-width' value='0' />
+            <format attr='border-style' value='none' />
+            <format attr='border-style' data-class='subtotal' value='none' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' value='0' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' data-class='subtotal' value='0' />
+            <format attr='border-style' data-class='subtotal' value='none' />
+            <format attr='border-width' data-class='total' value='0' />
+            <format attr='border-style' data-class='total' value='none' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-size' value='16' />
+            <format attr='font-weight' value='normal' />
+            <format attr='font-family' value='Tableau Bold' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='line-pattern-only' value='solid' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='stroke-color' scope='rows' value='#000000' />
+            <format attr='line-pattern-only' scope='cols' value='solid' />
+            <format attr='stroke-size' scope='rows' value='0' />
+            <format attr='line-visibility' scope='rows' value='off' />
+            <format attr='stroke-size' scope='cols' value='0' />
+            <format attr='line-visibility' scope='cols' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Multiple Values]' />
+              <text column='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='size' value='0.64767956733703613' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[:Measure Names]</cols>
+      </table>
+      <simple-id uuid='{2C735E0B-0EAF-42D5-B1C7-93FA018BE800}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <repository-location derived-from='http://localhost:9100/workbooks/AirbnbDashbord_17023123099310/Dashboard1?rev=' id='91736627' path='/workbooks/AirbnbDashbord_17023123099310' revision='' />
+      <style />
+      <size maxheight='1080' maxwidth='1920' minheight='1080' minwidth='1920' preset-index='17' sizing-mode='fixed' />
+      <zones>
+        <zone h='9167' id='1' name='Total Booking' w='10313' x='22656' y='4722' />
+        <zone h='9167' id='2' is-centered='0' is-scaled='1' param='C:/Users/SHRUTI WALUNJ/OneDrive/Desktop/Labmentix/Project 1 - AirBnB/A Comparative AirBnB Analysis Dashboard Using Tableau.twb Files/Image/Airbnb-Logo.png' type-v2='bitmap' w='10313' x='104' y='4722' />
+        <zone forceUpdate='true' h='9167' id='3' type-v2='text' w='10573' x='10365' y='4722'>
+          <formatted-text>
+            <run bold='true' fontcolor='#000000' fontname='Spartan Thin' fontsize='15'>Airbnb City</run>
+            <run>Æ&#10;</run>
+            <run bold='true' fontcolor='#000000' fontname='Spartan Thin' fontsize='15'>Dasboard</run>
+          </formatted-text>
+        </zone>
+        <zone h='9259' id='4' name='Average Price' w='10625' x='35156' y='4537' />
+        <zone h='9259' id='5' name='Average Rating' w='12917' x='48646' y='4537' />
+        <zone h='9074' id='6' name='Total Revenue ' w='10104' x='63646' y='4630' />
+        <zone h='37315' id='7' name='License Satuts / Room type' w='33854' x='2500' y='18426' />
+        <zone h='36944' id='9' name='Room type / Price' w='23125' x='75729' y='18333' />
+        <zone h='32500' id='10' name='Top 10 Host Name' w='28594' x='26146' y='60185' />
+        <zone h='37222' id='12' name='Number of rating /year' w='33854' x='39115' y='18611' />
+        <zone h='31944' id='14' name='Name /Availbilty' w='20938' x='2396' y='60556' />
+        <zone h='32407' id='17' name='Bedroom' w='38854' x='60208' y='60278' />
+        <zone h='9722' id='18' name='Total bed/bedroom/bathroom' show-title='false' w='23229' x='75677' y='4630' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='2450' minheight='2450' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='34' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98518' id='33' param='vert' type-v2='layout-flow' w='99166' x='417' y='741'>
+                <zone fixed-size='100' h='9259' id='4' is-fixed='true' name='Average Price' w='10625' x='35156' y='4537'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='100' h='9259' id='5' is-fixed='true' name='Average Rating' w='12917' x='48646' y='4537'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='98' h='9074' id='6' is-fixed='true' name='Total Revenue ' w='10104' x='63646' y='4630'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='105' h='9722' id='18' is-fixed='true' name='Total bed/bedroom/bathroom' show-title='false' w='23229' x='75677' y='4630'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='99' h='9167' id='2' is-centered='0' is-fixed='true' is-scaled='1' param='C:/Users/SHRUTI WALUNJ/OneDrive/Desktop/Labmentix/Project 1 - AirBnB/A Comparative AirBnB Analysis Dashboard Using Tableau.twb Files/Image/Airbnb-Logo.png' type-v2='bitmap' w='10313' x='104' y='4722'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='9167' id='3' type-v2='text' w='10573' x='10365' y='4722'>
+                  <formatted-text>
+                    <run bold='true' fontcolor='#000000' fontname='Spartan Thin' fontsize='15'>Airbnb City</run>
+                    <run>Æ&#10;</run>
+                    <run bold='true' fontcolor='#000000' fontname='Spartan Thin' fontsize='15'>Dasboard</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='99' h='9167' id='1' is-fixed='true' name='Total Booking' w='10313' x='22656' y='4722'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='36944' id='9' is-fixed='true' name='Room type / Price' w='23125' x='75729' y='18333'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='37315' id='7' is-fixed='true' name='License Satuts / Room type' w='33854' x='2500' y='18426'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='37222' id='12' is-fixed='true' name='Number of rating /year' w='33854' x='39115' y='18611'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='32500' id='10' is-fixed='true' name='Top 10 Host Name' w='28594' x='26146' y='60185'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='32407' id='17' is-fixed='true' name='Bedroom' w='38854' x='60208' y='60278'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='31944' id='14' is-fixed='true' name='Name /Availbilty' w='20938' x='2396' y='60556'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{10903712-86DB-4AF5-ABB9-B8F1C8FC6CAB}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.5' source-height='44'>
+    <window class='worksheet' name='Total Booking'>
+      <cards>
+        <edge name='left'>
+          <strip size='196'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[none:id:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{B9A0C62B-5B43-4400-BC79-E706D1CA99C8}' />
+    </window>
+    <window class='worksheet' name='Average Price'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{146976C7-63D4-4631-A166-68EEC39026DB}' />
+    </window>
+    <window class='worksheet' name='Average Rating'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{66219859-D272-492E-BB2F-CAA2E6D4DDF9}' />
+    </window>
+    <window class='worksheet' name='Total Revenue '>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{F6810312-197D-4378-89A5-2A04F5DBA570}' />
+    </window>
+    <window class='worksheet' name='Total bed/bedroom/bathroom'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <selection-collection>
+          <tuple-selection>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[:Measure Names]</field>
+                  </x-fields>
+                  <y-fields />
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[:Measure Names]</field>
+                  <field>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[Multiple Values]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;[federated.0x8oohq0zd6kx414sk9mp1jxu091].[sum:Bathrooms:qk]&quot;</value>
+                <value>18562.0</value>
+              </tuple>
+            </tuple-reference>
+          </tuple-selection>
+        </selection-collection>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{170D3B1C-D1B7-4E60-A052-F752A2795ACD}' />
+    </window>
+    <window class='worksheet' name='License Satuts / Room type'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[none:license_status:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight field='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[none:license_status:nk]'>
+          <color-one-way>
+            <field>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[none:license_status:nk]</field>
+            <field>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[none:room_type:nk]</field>
+          </color-one-way>
+          <bucket-selection>
+            <bucket>&quot;Registered&quot;</bucket>
+          </bucket-selection>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{B2487AD9-26B4-421B-9A8D-3669CBFB0D8B}' />
+    </window>
+    <window class='worksheet' name='Room type / Price'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[none:room_type:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{910196C4-8D57-4CEC-9A4F-A6364E1751A5}' />
+    </window>
+    <window class='worksheet' name='Top 10 Host Name'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[sum:price:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[none:host_name:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{E13509EB-E238-412F-92AC-DA49EA4A4CAD}' />
+    </window>
+    <window class='worksheet' name='Number of rating /year'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[sum:minimum_nights:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[none:license_status:nk]</field>
+            <field>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[none:reviews_per_month:qk]</field>
+            <field>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[none:room_type:nk]</field>
+            <field>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[sum:minimum_nights:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{04994243-CD5A-4020-97E1-B1730AF2B4C4}' />
+    </window>
+    <window class='worksheet' name='Name /Availbilty'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[sum:availability_365:qk]' type='color' />
+            <card pane-specification-id='0' param='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[cnt:availability_365:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[none:name:nk]</field>
+            <field>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[sum:availability_365:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{30AFAA33-7054-49CA-88F0-729936E82495}' />
+    </window>
+    <window class='worksheet' name='Bedroom'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[sum:Bedrooms:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[none:Bathrooms:ok]</field>
+            <field>[federated.0x8oohq0zd6kx414sk9mp1jxu091].[none:room_type:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{12519BE8-01E1-48FC-B44A-FAD3D5B9B944}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Average Price'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Average Rating'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Bedroom'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='License Satuts / Room type'>
+          <zoom type='entire-view' />
+          <highlight field='[federated.0x8oohq0zd6kx414sk9mp1jxu091].[none:license_status:nk]'>
+            <bucket-selection />
+          </highlight>
+        </viewpoint>
+        <viewpoint name='Name /Availbilty'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Number of rating /year'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Room type / Price'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Top 10 Host Name'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Total Booking'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Total Revenue '>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Total bed/bedroom/bathroom'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='14' />
+      <grid grid-overlay-mode='on' grid-size='50' />
+      <simple-id uuid='{529983FF-F08F-4272-A6F9-E7983F057CA4}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='42' name='Average Price' width='104'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Dashboard 1' width='192'>
+      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
+      cF8Y1LoAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='License Satuts / Room type' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABYlAAAWJQFJUiTw
+      AAAeLklEQVR4nO3dd3SU973n8fczMxrNaFRAEuoNUAHRexMgejMxtilxjRNjO5tz996bzbk3
+      m5ycxMk9m7PJSbL3JJubs95cN0wTBgkQQqAGEqgCQkgICUmg3nsbTXue/UNYMQs2tjMaCc/v
+      9Q/zjEYz30HPZ54yv+/zkxRFURAEJ6Wa6AIEYSKJAAhOTQRAcGoiAN9gtQWJzF2+jheef45/
+      +sWfsPwdR3sll06x91vbiYiZxwt7D3KvZ9h+hU4g9TvvvPPORBchjI+e+tv0BK7lr7/9CZmH
+      /p3Zm16gPPM4v/7Df2B0nUbsjEAyT73Pb//4V1RTw4n0HOLXf3qfxKMf0dDZR8L779Ji8WR+
+      TBgBEbPZv2UpaRXDnDzyR2qvnqbO4k2gboiPErPov1fMJ2fOkJCUxqyFS7F2VvOrX/4bt+oH
+      WLxwLppJ+lE7ScsS7CXtyJ85ePAtrBFr8Rqu4C8nivjFOz8j+9DvKC7J5T8z6vjVL3/CsT/8
+      G139nRTW9POTn7xF8skc/vm//xOXTiZhe8zzRkQEc+i9IxRnJzOs8eFu8XWi4vZwIH46f/ng
+      FP/7d7/jW2/9CG3jVS6VNjr8fX9ZIgDfcGt3v8jcIHeiY+ejsprQ6D3xnuqNu06FcdiIzmMq
+      U6d646YGiwyBoeH4BQcSEhBMQEAQHq7SY5/XZ+ZyfIy3+fPJAp7ZuBhUWgID/fEwuIFio7+7
+      i/zsSxiCZ+Pjpnbwu/7yRAC+wXSevsRGR/KPv/gtSnUmd4f82LXQjVdf/Q7TVr3IyhXrWR/Y
+      x8uvfo9F+97E392dqDB/QEtkVBigYmbUdMYi4KJnbsyDZUnNvt3rkKfOImSKDqwD/Ppff8Dv
+      jxfx5usv8PY//1fKrlwg+3oFep12ov4LnkiazF+EybKMSiUyOlnV3i5gyH0mc8J9KSvMw2/2
+      Ivw8dBNd1lcyqQNgtVrRaDQTXYbwDSY+XgWnJgIgODURAMGpiQAITs0uAehqqSX5dCKnz6Ux
+      MGJlZKCTlNOJXLxciEUG81AP588kkpqZi0UG60g/F84mcS4tB7MMzbcLaOqXQbFw9Uoe8uQ9
+      Lhe+YexyFqi6ogz/8GgG6q9T2KhBabnJoh0vMVieTpt+Psa7Gcza/G2oy6HSPBN14xUi1u3F
+      0FFIYUcgET2ZyKt+gKo8icGAZayfFwaIs0DC+LPL2hU5ay7GvnbSs4tZtn0v15rKiPAxYJy3
+      mPLsEkxWiUg/dyweKyhMzsBmktke6InsH8fw0QRwhdryfHo7XDm4ORRFUbDZbMiyjMVieeT1
+      7vV209jfZ4/S7cLgomVJYPBElyF8DXYJQEddKcfPFbBn/6uE+LpRINuQAdlqBlyxyQoyoNhM
+      KJ9ZRh5Bll0BGDGOYDGbsSmgUUloNJrP3QJUd3WRXVtjj9LtIsDdg5VhERNdhvA12CEACgkJ
+      iaz91stYBjrp1vozO3AqmXklGOtvErv6WcxVQ1y8UgytpcxesgttYx4pl6+j7y4nZsV2uHWM
+      WUvimdady8nUq+zfsQZJevwYFEGwJzscA8jU3Cmja2AEgMCIKEJ8PampLEfjFUhEkC+KInO/
+      shzc/ZgR4oeiyNRV3cGq8yEyLICh7jYUdz/ctRKtzc34BQaikqTP3QKcqyifdFuAH8bFT3QZ
+      wtfwVA6FEAEQ7EV8DyA4NREAwamJAAhOTQRAcGoiAIJTEwEQnJoIgODURAAEpyYCIDg1EQDB
+      qdllNOi929dIP38evxX72bM2hkspCTT3K1iHe4hZ8Qx+pipSixtRjfSy+cBBdC3XSMqvxcXU
+      xbr9bzGU/Z/Iq37APH0df028wQ++9wIqMRhOcAC7BGB67BJ2mPsoGRhd7uobIH7Hiwzfy+Nu
+      ZxflNdW8+b2DWPtqOZWWg3mglrcOvona1MZHJ9KYpwdQOH48lVffeFus/ILD2CUADw9dVggN
+      CiDzXBKy1cySdbF012nQSBKKqzdIPWg0alwkCUXrg1rdA0Dqod8ROn87nlr1ExtiZFm2R9l2
+      oyjKY+sUJj/79xvKI1wvbeH7/3AQU28DH50vwMNmptckI7ffxcVtJvLgdbpHZHR9d0AXCXIx
+      2175EfcuvEttZxTTfQ1f2BAz2a4WJ0kSLi4uE12G8DXYJQAlBVncuFFGt+Ue07w2snF1DEeP
+      HQdZZvvW3fjQTVLCURQXA8/tfRb1YBAnE45gU+t4fv/ztBZ0I+vU7H/tO5xOvkTYsztRq8Ru
+      kDD+RD+AHYh+gKfX5NqXEAQHEwEQnJoIgODURAAEpyYCIDg1EQDBqYkACE5NBEBwaiIAglMT
+      ARCcml0CYDENUZSdzp36LgBsFiNXMs5zMukcXYMmzMO9XDibxIVL+Q8myBjgYnISKelXMMvQ
+      Ul74YIIMK7lX88UEGYLD2GUwXHN9HUM97bTSyewwH3LOncJj3iaeDZ2KDTUXT54kZuN+lLps
+      0vKrUDfmEBq3F/eOfJIvlRPeXYDstYT2wjOY/ZaIfgDBYewSgPCoWFSDLQ8aYmyU1TYw2+0a
+      yeUa1m+Kp8cCUf4eWDxXcS05A9uIzLYgT+SAdVw+kgA6qK8oorvdhTc2hYl+AMFhxmX+IUly
+      Yfm6bVg6qvjkbBoun50gQ9F+ZoIME7KiBWCwvx+r2Yr8JSbIEP0Agr3YJQC9XW00t7bTMaSm
+      qzeY1QujybtexjSpE19ff8KwkZ5bAi23mLVkJ9rGXM7nFOPWfZvo5Vuh9Dixyzfh23WVUxdy
+      2bd9tZggQ3AIuwSgr6cTeUoEs6ZAT98QC9ftor66gj7rDJ5dNRMJGzV3bkPoViJDfVBm7MJQ
+      eRtr2Caiw/0Y9N0HHircg9eh82lCAcTqLziCaIixA9EQ8/SaXDvTguBgIgCCUxMBEJyaCIDg
+      1EQABKcmAiA4NREAwamJAAhOTQRAcGp2C0B7XRVNnQNjy7JlhJwredgARbZSlJPOtdv3AFAU
+      mRtXM8i/VQVAT2M13cbRL6QrKypFP4DgMHYJQE3ZNdIvpHC9vPnBPQp5Gcmk55ZgBi6fPoLN
+      fw62ulwulbaQl3yUwSmz0LVf58L1Bu7ln6emW+b+9XRut46IcUCCw9hlMNzMuUvRWv42QUZH
+      bQntqjBigsyAjbp+M69FB2IJ2con565gGR7mtd3BKLN28/GRJHz1II/0kFrcxlvf2wSMjgOS
+      ZRmr1frI68nKJOsHQHlsncLkZ/d+ANkyzH/85RBz12yg+GYxAbPnAqOjOyVU8GDllQAFCUY7
+      A0g/k4BfyOwH3WAKarUaYOzfz1JJk+vQRUJ6bJ3C5Gf3AEgaHf/6i18hK9Df0cGiOTFQX8LN
+      2i64n01g9Ao0DTkUVbfj3paHX3QcNCSzdf/bqO6eIb2ogs3LZ43tBj0tfQFPS53Cw+zyUVpS
+      kMXVijb6G4spvHUfvZsBg8HAuvXr8NC5Er97P4PVBQx6zmL9glDidu7DWn+ddpcZbF0+nfAl
+      G4mYomJJ/LMEupqRZXEQLDiG6AewA9EP8PSaXDvTguBgIgCCUxMBEJyaCIDg1EQABKcmAiA4
+      NREAwamJAAhOTQRAcGoiAIJTs8tguI7GalLPnCV45XNsXBxBZfEVblQ2YTUZWbpxN77WJpKz
+      byEpCrv2vYhLdxWnMq4hyTZ27H+Z7rxPkOcfYJZnN8dO5/LSgd1ijgDBIewSAK3Bh7gV87g9
+      aAIgOGoB0Yvi6KkvIa2kFEtHJftefQu5vZTzGQXYusrY98pbaAerOX4umznqTmSrQnJCImu/
+      9YpY+QWHsUsAvKZOpV/1t5XWYDBw71YeqXkVHHj526Seuo+7RsIyNRybORVZrcHDRULxikCy
+      XQU1XDj2J0JjVhM2VS8myBAcZlwmyLiTf4FrrS689ebruKhAtlkw2hRsAy1Ian8UWx/DNgWX
+      4SZkKQAYYMsLb1By/jA9w4vwdnMRE2QIDmGXAJQUZFFwNZ8mkxfTvFQUZF3BZ+YCEj85QeSC
+      lWyLW8aRjw6DbGXXgZfQdvpw5MOPkWxmth94le6cFtQ6N1578RmOnUrm1Zf2oFaJ3SBh/Il+
+      ADsQ/QBPry+1BehsrOJMehFzooIJnLWUMB/DeNclCA7x5J1p2wA//uFPGRzsp7aiiJOZJQ4o
+      SxAc48kBUGxYVW5ERQTR2NCEXq9zQFmC4BhPDoDGi3/5xwOkpqbSr4/kwMa5DihLEBzjyQGw
+      9vHhJwX85o9/ZmeMioSMUgeUJQiO8eQASBLtDTW09wxQW1uPpJ5c5+AF4e/x5LVZ7cVPf/w6
+      v/npf6OSKF7ZPN8BZQmCY3zhadDO+gpaTTrqG3qIix+9ZmdNYwfzZgQ4pDhBGG9fGABJpUat
+      Gr2G56df9avEN7TCN8gXBsAnJAofay+//2Umf/jrn/DUigvACt8sX+J7AIkAXRcvvfYWP//5
+      z8m8Xv3IQ4z9HZw69B5FFS0A9LfXcvTIURJOpTBig+HuRo4eOcKxE2cYtoKpr5Wjh49w+Fgi
+      Q1a4X3CBmm4Z5BGSky+KCTIEh3niUIgRk40X/stPeWOKF5IEXj5+jzymp3eIOdHB3G3vh1kB
+      JJ9LZceLbzJYlU361XKG7uWw5cBBlKYCUjKKobWQjXvfQN9TQuK5fGZb7iKHbKYu8xihK/eI
+      fgDBYb4wAAPNZbzy5k/w83EjctPr/Pg7Ox77uKCwCBq6apBMAFZktY6pOjX6sBiGaq9hUbng
+      q1djCY7FfPMCsqTB36BB0c9HyT4MWshJPoS3/ww2BHuJfgDBYb4wANXFeaz59o/4lz3TeeVH
+      72L7zg6efBSgxmKzYgMsI/2o8MRia8MGyOZ+FMUTq60PK6Cy9mKzeoJ2gMWrN3IrJwOzvBZX
+      tST6AQSH+MIAyDaZpPd/z91MDwpzb/PmwTaeff2HPBs356HH3S0toijvOveMdYQHuLFyVijH
+      TpzB0t9G/J6Xsd6XOXz8NAy2sWr3y7i2XOfQkURcjG0s3/kyxqsfYPAO5tXdyzh0LJnvvvQM
+      arEbJDjAF/YDWC0mBgeH+ewDdG7u6F0f/rQzDg0wYh6dI0urc8NNp2V4cADJRYebTouiKAwP
+      DYDaFYPeFUVRMA4NoqhdMOh1WM0m0GjRqCRGRkZwdXVFkiTRDyCMuy/cAmhcXJky1fWJT6I3
+      eKD//1oEDB6eY7clScLg/vCym7vH315H+7fX0OnEaFPBcSbXzrQgOJgIgODURAAEpyYCIDg1
+      EQDBqYkACE5NBEBwaiIAglMTARCc2rgEoK+jkbNJp0hJu8ygyYpluI+LyUlcvFyARQaraZC0
+      c6c5n5mLRYaWO0U0D8igWMnLLRD9AILDjMvVoZPOnmHPi28yWFfAubQi3AfKidqwD6U2m7T8
+      ajSNOQSveR73jnySL98hrCsf2XMx7YVnGfFdJPoBBIcZlwAsjJnOiWPHkM1DbHhmP3kZ5ewK
+      8MTitYrryVlYR2xsDfZCDlxP9pEE0EHj3Rt0tqp5Y2O46AcQHMb+AVDM3LrTzN4XX8HYfJuc
+      0jJkWUEGFJsZFJexZWQTsqIFoKe7E6tVRgY0kugHEBxjHNYkFSrFRGNTM43Nzbi4uDE3xIeM
+      /DIup6UTvXgNiyP8uXDlFtkpyUQt2wDAvJVb2bZwCokX8pjEV2wXvmHGZX4Am9lIWWkpGk9/
+      ZkeGI2Gj6vYtJI9AosIDUBSZe3duYdH7MWt6EIOdzSgegXi4SjQ3NhIQHIxK9AMIDjAuxwBq
+      rZ4FS5Z/9h6i5y4aW5IkFTNjF44tu/sGjd0OCgkZj5IE4bEm1860IDiYCIDg1EQABKcmAiA4
+      NREAwamJAAhOTQRAcGoiAIJTEwEQnJoIgODUxmUoRHvtLc5kFOPp6UHc5u2Y64pIvdGANNLH
+      1gNv4Np6g6S8GjSmHuL3v8lgzvvIK95mrlsD7yVd5/uvPy96AgSHGIcAKKSm5fLt776Nu0YC
+      FD5IvMsb3z2Itfc+iRk5mPvvc/CNN1GPtHLoZBrzdDYUFBKOp/Di62+LlV9wmHEIgJWOtkay
+      Uk7T1d7G9CXr0Wg0uEgS6HyAIjQaNVpJQnH1Ra3qBiD1498TOncbU3Rq0RAjOMw4BEBDcFg4
+      67Z/C72pnfeSruBlM9NnlpE7qtG4TUcZLKbHJOPaVwmuM0G5ybaXfkjNxf9LfVc04T5uoiFG
+      cIhxCIDEMzu3ce6T49gUha1bdzFN6ub08aMoGj3P7d2DeiCIk8ePIKu07Nm/l7b8LmS9hv2v
+      vkrS2UxCntuFWkzHKjjAuDTE2ItoiBHG2+TalxAEBxMBEJyaCIDg1EQABKcmAiA4NREAwamJ
+      AAhOTQRAcGoiAIJTEwEQnNq4BcAy3EvCqWQsgMXYT9q506RlF2KRwWYaJCPlDKlZeVhkaK24
+      NjZBRkF+oZggQ3CYcWmIURQbWRdTqW0axopC1ukTzFy/D6X2MukF1agbcwha9Rzu7fkkZ98h
+      rDMP2WMRHUXJDHovEP0AgsOMSwDqynLBbz4hgzcBmU4T7Az0xDJlNTeSs7AO29gaMgU5KJ7s
+      IydABy01N2lrlnhjQ4ToBxAcxu4BkM1DfHwsmRnzl5BfkM+U6dHIyqcTZFhGJ8hQPp0gw4yi
+      jI6jb29txSqDAqjEBBmCg9g9ACqtgZ/9j9+MLlisbFizlLLherIKy6H5BlGLt6NtuMrF3DLc
+      ukqIXLoZbiewYM12vDuySbxYwAtbVyCJ3SDBAcZlF+hTm7dsRgss3fQsd2/fhIWbiInwRZm5
+      G7fbN7EGrGf2DH8GfJ8HTxUewRtwbWhAAcTqLzjCuAbAz99v9IZKTcy8JWP3S5KKqLmLx5Y9
+      pgWP3Q4JDR3PkgThIZNrZ1oQHEwEQHBqIgCCUxMBEJyaCIDg1EQABKcmAiA4NREAwamJAAhO
+      bVwCIFtNFGRncDn/JjYFFNlGcd4liitqAVAUmVsFl7l2e/Tyhr3N9+gxjvYAVFdViX4AwWHG
+      ZShESWEuvjPnQ2c5ZzOL8B6sRB21Hqn6EtlWHdq6LIyhq/FoukqaSYf3vXPIq36AX3s2N3um
+      MDNyPKoShEeNSwAWrooHRSazqJYpYWu43zjCa7GhWMK38UnKVSzDg7y2Kxxljg8fHzmDtx5k
+      Uy/nrzdx8HvxAGP9AFar9ZHnl5VJ1g+A8tg6v8lSqioYmUTvea6fP9E+077y741LACxDnXz0
+      4RFi1+1m1dxwPiq9hMToIDiwAaOjPRXUY8vpp4/hHzoHtTT6E5VKhaIoqNXqR55/snWMSUiP
+      rfOb7FZLMwNm00SXMcbP4M5sv4Cv/HvjEoCkhONsPHCQGb4GQCHEQ0tpfTfK/Sv4z1yOS0MO
+      N+51YmjPxzdyNTSlsHX/96Eiiczrd9m4NHpsOPTj+wImVwDg8+oUHOnr/A3GIQAyQaGhXMs8
+      xzUgcsFK4nfv4+qlTJgSyYZFYbBgH7lZ6fQZQtm+ciZd9+JRvFT4bXyOkpu3kGVFTJAhOMQ4
+      BEBF3JZnH7l33ZZdf1tQa4nbvHNscdrMeQ9uSSxYtND+JQnC5xDfAwhOTQRAcGoiAIJTEwEQ
+      nJoIgODUJiQAVmMfqWcSSb54GbMNmsvyaeyXQbFwJSdXjAUSHGYCAqCQdvok05dvZmGQlbNZ
+      ZbRUFNEyoHAt7TSyd+ik+6ZX+OaakAB0mmViAjwIil3DcNsNAO6V5nKzS8/a2BDHlyQ4rQkI
+      gIRNfnBtUNsIsuwKjM4Kbx4ZwSb2fgQHmpAALJsZRHJWERlnzzBrxUYAohetY9cyfz5JuSKO
+      AQSHGddLI36e2LiduNdUYIvcxozQaQxNOwAGFYbgOHS+rRNRkuCkJiQAkiQRHjl7bNkw1W/s
+      tn/AVx/S+rSxyjJX6+5PdBkPmeMXgK/BMNFlOIzJasVosSApyuTb3/jsBBmPmwug12ik3zQy
+      AZU9notaTaCH52N/pijKI8N0ZUWhsa/XEaV9adMM7ugfM8fB4+oHaOrvwzaJJiqZotfj6ap7
+      5P7Pq3/QbKJ7eHhyBuBTnzdBxtPi05lsJtuEHl/F0/43eFL9kzoAgjDent6Ppr+TzWLCYqdz
+      roNdrbR1D9rlub4ss9kkzpbZwVMRgI7qfP7Xn/9KQkIC6fklj/zcNtJPVcPo2SNjbwvVde1P
+      fM6G64nk1w3bpb6bhfnYXFy/0u/IVhNJKReA0cvGZGRdfPRBxm4qGrof+/vZF47TPuD4pvRT
+      7/2FI8eOc+jDQ9R3PRz6mooyhsxffFxgNfVTW988niV+IUW2cul8IsePJ3DiZOrEnAX6qkwD
+      nUQuiWf3ytHrpfQ2N9LU001VZS0rNmyi6VoKH16qYtvGTWxYFo1eq6GruRqT2oN7tU2sWjSb
+      K5cy0fjOYNWi2XzabdnZUMWpm/dZtWE7AV5abuRm0TqiY3P8anrra2kf7KamoZcFMUGUlN1j
+      3ZateGksZGdloQ+MZvn8KCTZSKtRyxqPrzhJnizT0NwCjB6otba1gCJTfiOXu60jbN4cT3n6
+      Sd7P7+O5rfFsiptPUU4Ww1o/1q18uGtusKuF3hGJ+nv3WbxqKeUFObQatWxYvwotFvIuZ2LS
+      +7N+1WJa7lbRNdxJY5eN2SHulFa3s3XHVtw0X274ycAw7HvtANqBaj5IyWfz0ulodRY6jAZ8
+      NDqwDFDZPEhMRDAttZW4+YVTeS2Hpl4r6zdt4O6VM5y8VM2GbdvZHreYgpxMRnQBrF85Oj2u
+      MtRBZbdCW00lq9auoiz/Mi3DWjbFr0arslGUc4lePNkQt5z25vt0dXRQ32kkNsKX0rtNbNi8
+      CS/95/8tLINdVPfLvLF/HygK6nfeeeedr/aXc7z+1rskpRXS1VJHtxHk5kpu9bjyzNpITp+/
+      yea18+l18WXfljX0NZZTes+MuTmHlBvd7Ni8lozEI4St2IZSm0e9EkiIt57ehluUD05j/5ZF
+      nDqdjKXlLqaARSwLd+HEhWuomqvpmxZFpFxNRq0Le5Z4k3ijneZr6UTG7WLgTg79+mBsrXcw
+      TZlOhP+Ur/SeFJuVxBOH6enp5/btMjqGbARY27htCmDbsnAOn7jAMxsW0uEayd5Ni8hNTcAl
+      YiV+I1Xc7HJF6q/DL2Ie7q5q2iqL+CipgM07t3A/P4WBKbEsCXMhKeMWHZUFTJu/gWB1G1ml
+      bXTcyMNzcRya6nSqNLOJ8+8jvV5LbIjXl6q7OL+AGXNiqSsvxuIVyp2MU/R4hLBm0SzyU84T
+      MHceF0+fY8GiWM6euci8BbFo9V7MDDTwSUohW+IXY1F7s3tLHDlnj6OPXss04x1utumZEeSF
+      0lHOz/7PeZ7bs4ua3BQGfeaxYoaehNQCBuuLcZ2xktlThzl3tYaB5hIkv/l495VT3O3Fukg1
+      uTUDxIT5f279Khcd/XUVZF0tQtF7Px1bAICVG3eObQHuZDURFTUdnR40n7PFVWl1bNq2FQ+d
+      hvrWegazL2AzDhDmOwB4g6QiOjoKjdYVrcZMZZeVvVuC0KvAZixE0RmIiAhCY9QSEhqGu2EE
+      2dZPXXMz/VnnsQ11ETNspLSygRU7ln2t9xQSvZD9+/cj26wcPXGY+souFuzbil4n4W4zIiuj
+      1xwCaGmuZ7jnMnplGENEBA/vcKlZt2kr/lPcuNXWz7yV4UzVjaAaKqZJpbAh1BuVMYa+8nwC
+      tB6EBU+j3qAjJDgYd7qx9H35XSljfwfZly4RNmMWu+ZEklh5k81xyxjbgKj0zAnScf1GCV5h
+      sRjb7nMu/QaBPq4M9Noeeq67zc24j2SCPIxPSB8QChKs3LCDYG8D2V1GnokPxkOjQh7Jp0M2
+      sS3UD4N2KpYrx8HHQESwH31tboT6heDm1grKE96LpCZ+1wvEKzIn3/33pyQAkorCS+cx1vvj
+      HRZDiKR6cG539PpBGjcvBqrOkeKiZkmEC5I0eg2iT8//rl8ZR1FNBwZ3b0ICRz+pJUk1dgCk
+      UqnYvmwuH7z/EVP1MlFz1qK+Xzp2LSOVJIEEKpXEutUruFnbhd7LnwAPK7V4McVVxUBbFZml
+      3WxaOI206y08t23NE97Tw6dHVSoVS3eu5IP338N7qh6vqDmovfzpKztOupuVJaviyb5RjUrv
+      yYxQX5r7VIyd3pZUSA/26+avXMSZox9g0KoInb+aUFr48MPD6CQzi9fspPXKpQfvX40kSUiK
+      9JVG33r4BLF95zO4PVhzVGrV2FVqpAfvZ+GKZbzzP9/lH372DraucoaGh5F9dKhVKlx0U2mu
+      PsP5y25sWb2ajFu1eLp5EB7+6ae2hOrBe9m2Yi6HP/yYKW4KM2evZqahl6NHDmNQmYlauo2B
+      hkKQRl9XGv1j8aQzztaRPpLPpGBVaejX+InToH+Pu0WZDEydw5LIz9/kCpPbU3EWaLIatLoS
+      O12s/E+z/wff4tMAH7gMTwAAAABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='42' name='Total Booking' width='124'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
