@@ -1,12 +1,14 @@
-# comparative-analysis-of-airbnb-listings-using-tableau
+🏡 Comparative Airbnb of Airbnb Listings Using Tableau
 
 # 📌 Project Overview
 This project focuses on building an interactive Tableau dashboard to compare Airbnb markets in Chicago and New Orleans. It highlights key trends in pricing, availability, host performance, and customer preferences using real-world Airbnb listings data.
+
 # 📊 Dataset
 Public Airbnb listings dataset
 Covers two major cities:
 Chicago
 New Orleans
+
 # ⚙️ Key Features
 # 🧹 Data Cleaning & Preparation
 Cleaned and transformed raw data into an EDA-ready structured dataset
@@ -29,6 +31,7 @@ Identify market gaps
 Understand revenue drivers
 Analyze customer preferences
 Interactive filters allow dynamic exploration across cities and metrics
+
 # 🔑 Key Insights
 # 📊 Availability:
 Chicago: 1.3M listings
@@ -46,18 +49,22 @@ Average rating: 4.38
 Most listings offer:
 2–3 bedrooms
 1–2 bathrooms
+
 # 🛠️ Tools & Technologies
 Tableau (Dashboard & Visualization)
 Data Cleaning & Transformation
 Exploratory Data Analysis (EDA)
+
 # 🚀 How to Use
 Open the Tableau workbook (.twb / .twbx file)
 Explore dashboards using filters and interactive visuals
 Analyze trends across cities, property types, and pricing
+
 # 📌 Conclusion
 This project demonstrates how data visualization can uncover actionable insights in the short-term rental market, helping stakeholders make data-driven decisions.
 
-
+# 👤 Author
+Shruti Walunj
 
 
 
